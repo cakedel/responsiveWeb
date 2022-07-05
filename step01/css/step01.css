@@ -1,0 +1,38 @@
+html { font-size: 20px; }
+body { font-size: 0.8rem;}
+
+
+.container { display: flex; gap: 1.5rem; width: 60rem; margin: 0 auto; }
+
+header { line-height: 5rem;}
+.gnb { background: #f1f1f1; }
+.gnb>ul { gap:0; }
+.gnb>ul>li { flex: 1; text-align: center; align-items: center;}
+.gnb>ul>li~li { border-left: 0.05rem solid #ddd;}
+.gnb>ul>li>a { di`splay: block; line-height: 2rem; }
+
+.reStep { padding: 5rem 0; background: #ff0; text-align: center; }
+.reStep h2 { font-size: 1.25rem; margin: 0 0 0.5rem 0; font-weight: 700; }
+.reStep p { font-size: 0.75rem; margin: 0 0 1.5rem 0;}
+
+.mbtn { position:fixed; inset: 1rem 1rem auto auto; display: none;}
+
+@media (max-width:1200px) {
+    .container { width: auto; }
+    .reStep { background: #f00; }
+}
+
+@media (max-width:768px) {
+    .container { padding: 0 0.75rem; }
+    .reStep { background: #369; }
+}
+
+@media (max-width:560px) {
+    html { font-size: 0.8rem; }
+    .mbtn { display: block;}
+    .gnb { display: none; background: #fff; }
+    .gnb>ul>li~li { border-left: none; border-top: 0.05rem solid #ddd;}
+    .container { flex-direction: column; }
+    .reStep { color: #fff; }
+    .reStep h2 { font-size: 8vw; }
+}
