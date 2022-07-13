@@ -1,0 +1,42 @@
+.Wrap {}
+#header { position: absolute; inset:0 auto auto 50%; width: 100%; transform: translateX(-50%); z-index: 999;  }
+#header .container { display: flex; justify-content: space-between; margin: 0 80px; line-height: 100px; }
+
+.gnb>ul { display: flex; gap: 40px;  #fff; }
+.gnb>ul>a {display: block;}
+.gnb>ul>li { position: relative; color: }
+.gnb>ul>li .smenu { position: absolute; inset: 150px auto auto 50%; width:150px; transform: translateX(-50%); line-height: 40px; border: 3px solid #369; text-align: center; background: #fff; color: #333; opacity: 0; visibility: hidden; transition: 0.5s; }
+.gnb>ul>li:hover .smenu { top: 90px; opacity: 1; visibility: visible; }
+
+#mainVisual { position: relative; }
+#mainVisual .mainSlider figure {height: 100vh; }
+
+#mainVisual .mainSlider .itm01 { background: url(../img/mainvisual01.jpg) no-repeat center center/cover;}
+#mainVisual .mainSlider .itm02 { background: url(../img/mainvisual02.jpg) no-repeat center center/cover;}
+#mainVisual .mainSlider .itm03 { background: url(../img/mainvisual03.jpg) no-repeat center center/cover;}
+#mainVisual .slogan { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); width: 1200px; color: #fff; text-shadow: 0 0 3px #000; }
+#mainVisual .slogan h2 { margin: 0 0 11px 0; text-transform: uppercase; font-size: 50px; font-weight: 700; }
+#mainVisual .slogan p { font-size: 16px; font-weight: 300;line-height: 1.5; }
+
+.mbtn { display: none;}
+
+
+#footer { padding: 100px 0; text-align: center; }
+
+@media (max-width:768px) {
+    #header { position: absolute; inset:0 auto auto 50%; width: 100%; line-height: 150px; z-index: 999;  }
+    #header .container { display: flex; justify-content: space-between; margin: 0 80px; }
+    
+    .gnb {position: fixed; inset: 0 auto auto -100%; width: calc(100% - 90px); height: 100vh; background: #fff; color: #333; border-right: 1px solid #ddd; padding: 15px 0 15px 0; transition: left 0.5s; z-index: 999; }
+    
+    .gnb.on {left: 0;}
+
+    .gnb>ul { display: flex; flex-direction: column; gap: 0px; line-height: 2.5; padding: 0 15px; text-align: center; }
+    .gnb>ul>a {display: block;}
+    .gnb>ul>li { position: relative; border-bottom: 1px solid #ddd; }
+    .gnb>ul>li .smenu { display: none; position: static; width:auto; inset: 150px auto auto 50%; width: auto; transform: translateX(0); line-height: 40px; text-align: center; background: #f1f1f1; color: #333; border:none; opacity: 1; visibility: visible;  transition: none;}
+    .gnb>ul>li:hover .smenu { top: 90px; opacity: 1; visibility: visible; }
+    
+    .mbtn { display: block; position: fixed; inset: 30px 30px auto auto; padding: 5px; border-radius: 5px; font-size: 25px; background: #f1f1f1; cursor: pointer; }
+    
+}
